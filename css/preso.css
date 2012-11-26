@@ -217,7 +217,7 @@ li {
 }
 
 .impress-on-cache {
-  background-image: url(/img/superman.jpg);
+  background-image: url(../img/superman.jpg);
   background-color: #d0bba6;
   background-repeat: no-repeat;
   background-size: 90%;
@@ -250,7 +250,7 @@ li {
 }
 
 .impress-on-highlander {
-  background-image: url(/img/highlander.jpg);
+  background-image: url(../img/highlander.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position:center;
@@ -276,14 +276,14 @@ li {
 }
 
 .impress-on-newera {
-  background-image: url(/img/html5.png);
+  background-image: url(../img/html5.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position:center;
 }
 
 .chrome, .safari, .firefox, .opera, .ie {
-  background: url(/img/browsers.png) no-repeat;
+  background: url(../img/browsers.png) no-repeat;
   background-size: auto 128px;
   width: 128px;
   padding-top: 128px;
