@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Cache me if you can</title>
-    <meta name="description" content="Cache me if you can" />
+    <title>Everything Animated</title>
+    <meta name="description" content="Everything Animated" />
     <meta name="author" content="Yehor Lvivski" />
 
-    <link href="css/preso.css" rel="stylesheet" />
+    <link href="css/presto.css" rel="stylesheet" />
 </head>
 <body class="impress-not-supported">
 
@@ -19,221 +19,185 @@
 <div id="impress" data-transition-duration="500">
   
     <div id="title" class="step" data-x="0" data-y="0">
-      <h1>Faster<br>Web</h1>
+      <h1>Everything</h1>
     </div>
     
-    <div id="alt-title" class="step" data-x="0" data-y="500" data-rotate="90">
-      <h2>Cache me<br> if you can</h2>
+    <div id="alt-title" class="step" data-x="0" data-y="400" data-rotate="-90">
+      <h2>Animated</h2>
     </div>
     
-    <div id="js" class="step" data-x="800" data-y="500">
-      <h2>Javascript</h2>
+    <div id="wiki" class="step" data-x="-600" data-y="400">
+      <blockquote><p>Animation is the rapid display of a sequence of images to create an illusion of movement.<p><footer>Wikipedia</footer></blockquote>
     </div>
     
-    <div id="speed" class="step" data-x="600" data-y="1000" data-rotate="180">
-      <h2>Speed</h2>
+    <div id="practice" class="step" data-x="-600" data-y="0" data-rotate="90">
+      <h2>History</h2>
     </div>
     
-    <div id="cache" class="step" data-x="600" data-y="1500" data-rotate="90">
-      <h2>Cache</h2>
+    <div id="gif" class="step" data-x="-1200" data-y="0">
+      <img src="img/babycha.gif" height="450"/>
     </div>
     
-    <div id="wiki" class="step" data-x="-100" data-y="1500" data-rotate="90">
-      <blockquote><p>Cache (<span class="transcript">/ˈkæʃ/</span>) is a component that transparently stores data so that future requests for that data can be served faster.<p><footer>Wikipedia</footer></blockquote>
+    <div id="apple" class="step" data-x="1000" data-y="0">
+      <h2>Apple</h2>
+      <br>
+      <a class="button" target="_blank" href="examples/apple.html">1998</a>
+      <a class="button" target="_blank" href="examples/apple2.html">2001</a>
     </div>
     
-    <div id="store" class="step" data-x="-1200" data-y="1000">
-      <h3>Memory</h3>
+    <div id="js" class="step" data-x="1000" data-y="-800" data-rotate="90">
+      <h2>JavaScript</h2>
+    </div>
+    
+    <div id="clock" class="step" data-x="0" data-y="-800">
+      <h3>Clock</h3>
+      <iframe src="frames/clock.html"></iframe>
+    </div>
+    
+    <div id="newera" class="step" data-x="-2800" data-y="3000"></div>
+    
+    <div id="css" class="step" data-x="1000" data-y="1000" data-rotate="-90">
+      <h2>CSS</h2>
+    </div>
+    
+    <div id="transforms" class="step" data-x="1000" data-y="1800" data-rotate="-90">
+      <h3>Transforms</h3>
       <ul>
-        <li>RAM <span class="best">fastest, not persistent</span></li>
-        <li>Disk <span class="average">slower, persistent</span></li>
-        <li>Network <span class="worst">slowest</span></li>
-      </li>
-    </div>
-    
-    <div id="practice" class="step" data-x="-800" data-y="100" data-rotate="-90">
-      <h2>Practice</h2>
-    </div>
-    
-    <div id="oldschool" class="step" data-x="-1600" data-y="100" data-rotate="-90">
-      <img src="img/ie.gif" height="150"/>
-    </div>
-    
-    <div id="browsercache" class="step" data-x="-2500" data-y="100">
-      <h3>Browser Cache</h3>
-      <ul>
-        <li><code>Expires</code> & <code>Cache-Control:&nbsp;max-age</code></li>
-        <li><code>Last-Modified</code> & <code>ETag</code></li>
+        <li>Do not disrupt the normal flow</li>
+        <li><code>transform</code> & <code>transform-origin</code></li>
+        <li><code>skew</code>, <code>scale</code>, <code>rotate</code>, <code>translate</code></li>
       </ul>
+      <a href="http://www.w3.org/TR/css3-transforms/" target="_blank">CSS Transforms</a>
     </div>
     
-    <div id="highlander" class="step" data-x="-2500" data-y="1500" data-rotate="-90">
-      <h3>There can be only one</h3>
-    </div>
-    
-    <div id="cookies" class="step" data-x="-1200" data-y="1800" data-rotate="0">
-      <h3>Cookies</h3>
-      <ul>
-        <li>20 records per domain</li>
-        <li>4KB per record</li>
-      </ul>
-      <a href="http://www.ietf.org/rfc/rfc2109.txt" target="_blank">RFC 2109</a>
-    </div>
-    
-    <div id="plugins" class="step" data-x="-1200" data-y="2800" data-rotate="-90">
-      <h3>Java/Flash/Google Gears</h3>
-      <ul>
-        <li>Have to be installed</li>
-        <li>May be blocked by AdBlock</li>
-        <li class="worst">INSECURE</li>
-      </ul>
-    </div>
-    
-    <div id="newera" class="step" data-x="200" data-y="2800" data-rotate="0">
-    </div>
-    
-    <div id="appcache" class="step" data-x="200" data-y="4000" data-rotate="0">
-      <h3>AppCache</h3>
-      <code>&lt;html manifest="cache.manifest"></code>
-      <a href="http://www.w3.org/TR/offline-webapps/" target="_blank">Offline WebApps</a>
-    </div>
-    
-    <div id="manifest" class="step" data-x="1200" data-z="-600" data-y="4000" data-rotate-y="90">
-      <pre>
-        <code><mark>CACHE MANIFEST</mark></code>
-        <code>#2012-11-17:v1</code>
-        <code><mark>CACHE:</mark></code>
-        <code>/favicon.ico</code>
-        <code>index.html</code>
-        <code>stylesheet.css</code>
-        <code>main.js</code>
-        <code><mark>NETWORK:</mark></code>
-        <code>/login</code>
-        <code>/api</code>
-        <code><mark>FALLBACK:</mark></code>
-        <code>/main.сgi<mark></mark>/static.html</code>
-        <code>images/large/<mark></mark>images/offline.jpg</code>
-        <code>*.html<mark></mark>/offline.html</code>
-      </pre>
-    </div>
-    
-    <div id="events" class="step" data-x="200" data-z="-1200" data-y="4000" data-rotate-y="180">
-      <code>window.applicationCache</code><br><br>
-      <ul>
-        <li><code>checking</code>, <code>downloading</code>, <code>progress</code>, <code>cached</code></li>
-        <li><code>noupdate</code>, <code>updateready</code></li>
-        <li><code>.swapCache()</code></li>
-      </ul>
-    </div>
-    
-    <div id="appcache-browsers" class="step" data-x="-1000" data-z="-600" data-y="4000" data-rotate-y="270">
+    <div id="transform-browsers" class="step" data-x="0" data-y="1200">
       <ul class="browsers">
-        <li class="chrome">4</li>
-        <li class="safari">4</li>
+        <li class="chrome">1</li>
+        <li class="safari">3.2</li>
         <li class="firefox">3.5</li>
-        <li class="opera">10.6</li>
+        <li class="opera">10.5</li>
         <li class="ie">10</li>
       </ul>
     </div>
     
-    <div id="wat" class="step" data-x="3500" data-y="2500" data-rotate="0">
-      <h3>WAT? It doesn't</h3>
+    <div id="transforms3d" class="step" data-x="0" data-y="2000">
+      <h3>3D Transforms</h3>
       <ul>
-        <li>work w History.pushState()</li>
-        <li>treat Query String as same URI</li>
-        <li>have dynamic caching</li>
+        <li><code>perspective</code> & <code>perspective-origin</code></li>
+        <li><code>scale3d</code>, <code>rotateY</code>, <code>rotateY</code>, <code>rotateZ</code>, <code>translate3d</code></li>
       </ul>
     </div>
     
-    <div id="filesystem" class="step" data-x="2000" data-y="1500" data-rotate="-90">
-      <h3>FileSystem API</h3>
-      <ul>
-        <li>Persistent uploader</li>
-        <li>Video game with lots of media assets</li>
-        <li>Audio/Photo editor</li>
-      </ul>
-      
-      <a href="http://www.w3.org/TR/file-system-api/" target="_blank">FileSystem API</a>
-    </div>
-    
-    <div id="api" class="step" data-x="2500" data-y="1500" data-z="-600" data-rotate="-90" data-rotate-y="90">
-      <ul>
-        <li>Reading and manipulating files: <code>File/Blob</code>, <code>FileList</code>, <code>FileReader</code></li>
-        <li>Creating and writing: <code>Blob</code>, <code>FileWriter</code></li>
-        <li>Directories and file system access: <code>DirectoryReader</code>, <code>FileEntry/DirectoryEntry</code>, <code>LocalFileSystem</code></li>
-      </ul>
-    </div>
-    
-    <div id="fsrequest" class="step" data-x="2000" data-y="1500" data-z="-1200" data-rotate="-90" data-rotate-y="180">
-      <pre>
-        <code>window.requestFileSystem(</code>
-        <code>  type, // TEMPORARY || PERSISTENT</code>
-        <code>  size, // storage size in bytes</code>
-        <code>  successCallback,</code>
-        <code>  errorCallback</code>
-        <code>)</code>
-      </pre>
-    </div>
-    
-    <div id="fs-browsers" class="step" data-x="1500" data-y="1500" data-z="-600" data-rotate="-90" data-rotate-y="270">
+    <div id="transform3d-browsers" class="step" data-x="1000" data-y="3000" data-rotate="-90">
       <ul class="browsers">
-        <li class="chrome">22</li>
-        <li class="safari dim"></li>
-        <li class="firefox dim"></li>
+        <li class="chrome">12</li>
+        <li class="safari">4</li>
+        <li class="firefox">10</li>
         <li class="opera dim"></li>
-        <li class="ie dim"></li>
+        <li class="ie">10</li>
       </ul>
     </div>
     
-    <div id="storage" class="step" data-x="1300" data-y="2700">
-      <h3>Web Storage</h3>
-      <ul>
-        <li><code>length</code> storage size</li>
-        <li><code>key(index)</code> returns key by index</li>
-        <li><code>getItem(key)</code> returns item by key</li>
-        <li><code>setItem(key, value)</code> sets/updates</li>
-        <li><code>removeItem(key)</code> removes item by key</li>
-        <li><code>clear()</code> flushes storage</li>
-      </ul>
+    <div id="3d" class="step" data-x="1600" data-y="3000" data-rotate="90">
+      <iframe src="frames/3d.html"></iframe>
     </div>
-
-    <div id="sevents" class="step" data-x="2500" data-y="3000" data-rotate="90">
+    
+    <div id="cube" class="step" data-x="2500" data-y="3000">
+      <iframe src="frames/cube.html"></iframe>
+    </div>
+    
+    <div id="transitions" class="step" data-x="2500" data-y="2000" data-rotate="90">
+      <h3>Transitions</h3>
       <pre>
-        <code>window.addEventListener(</code>
-        <code><mark>"storage"</mark>, function(</code>
-        <code>  key,</code>
-        <code>  oldValue,</code>
-        <code>  newValue,</code>
-        <code>  url</code>
-        <code>){}, false)</code>
+        <code>transition:  [</code>
+        <code>  &lt;<mark>property</mark>&gt; ||</code>
+        <code>  &lt;<mark>duration</mark>&gt; ||</code>
+        <code>  &lt;<mark>timing-function</mark>&gt; ||</code>
+        <code>  &lt;<mark>delay</mark>&gt; ]</code>
       </pre>
+      <br>
+      <a href="http://www.w3.org/TR/css3-transitions/" target="_blank">CSS Transitions</a>
     </div>
     
-    <div id="bench" class="step" data-x="3000" data-y="4000" data-rotate="360">
+    <div id="transition-browsers" class="step" data-x="0" data-y="2700">
       <ul class="browsers">
-        <li class="chrome">4<br><span class="bench average">200x</span></li>
-        <li class="safari">4<br><span class="bench best">2x</span></li>
-        <li class="firefox">3.5<br><span class="bench average">170x</span></li>
-        <li class="opera">10.5<br><span class="bench worst">400x</span></li>
-        <li class="ie">8<br><span class="bench best">80x</span></li>
+        <li class="chrome">1</li>
+        <li class="safari">3.2</li>
+        <li class="firefox">4</li>
+        <li class="opera">10.5</li>
+        <li class="ie">10</li>
       </ul>
-      <br><a href="http://www.w3.org/TR/webstorage/" target="_blank">WebStorage</a>
     </div>
     
-    <div id="use" class="step" data-x="1800" data-y="100" data-rotate="90">
-      <h2>Use</h2>
+    <div id="animation" class="step" data-x="-1200" data-y="2000" data-rotate="180">
+      <h3>Animations</h3>
+      <pre>
+        <code>animaton:  [</code>
+        <code>  &lt;<mark>name</mark>&gt; ||</code>
+        <code>  &lt;<mark>duration</mark>&gt; ||</code>
+        <code>  &lt;<mark>timing-function</mark>&gt; ||</code>
+        <code>  &lt;<mark>delay</mark>&gt; ||</code>
+        <code>  &lt;<mark>iteration-count</mark>&gt; ||</code>
+        <code>  &lt;<mark>direction</mark>&gt; ||</code>
+        <code>  &lt;<mark>fill-mode</mark>&gt; ]</code>
+      </pre>
+      <br>
+      <a href="http://www.w3.org/TR/css3-animations/" target="_blank">CSS Animations</a>
     </div>
     
-    <div id="world" class="step" data-x="3000" data-y="300" data-rotate="0">
+    <div id="animation-events" class="step" data-x="-1200" data-y="1100">
+      <h3>Animations Events</h3>
       <ul>
-        <li><span class="twitter">twitter</span>: WebStorage, <span class="mobile">AppCache</span></li>
-        <li><span class="gmail">Gmail</span>: WebStorage, <span class="mobile">AppCache</span>, <span class="mobile">IndexedDB?</span></li>
-        <li><span class="facebook">facebook</span>: WebStorage</li>
+        <li><code>animationstart</code></li>
+        <li><code>animationend</code></li>
+        <li><code>animationiteration</code></li>
       </ul>
     </div>
     
-    <div id="demo" class="step" data-x="-2500" data-y="2500" data-rotate="360">
-      <a href="http://lvivski.github.com/terminal/" target="_blank" class="button">demo</a>
+    <div id="animation-browsers" class="step" data-x="-2000" data-y="1100" data-rotate="-90">
+      <ul class="browsers">
+        <li class="chrome">4</li>
+        <li class="safari">4</li>
+        <li class="firefox">5</li>
+        <li class="opera">12</li>
+        <li class="ie">10</li>
+      </ul>
+    </div>
+    
+    <div id="vexel" class="step" data-x="-2000" data-y="2000">
+      <a class="button" target="_blank" href="http://lvivski.github.com/vexel/">Vexel</a>
+    </div>
+    
+    <div id="animation-demo" class="step" data-x="0" data-y="3300" data-rotate="180">
+      <iframe src="frames/animations.html"></iframe>
+    </div>
+    
+    <div id="control" class="step" data-x="-2000" data-y="0">
+      <h2>Control</h2>
+    </div>
+    
+    <div id="timeout" class="step" data-x="2000" data-y="1000">
+      <code>setTimeout</code>
+      <iframe src="frames/timeout.html"></iframe>
+    </div>
+    
+    <div id="raf" class="step" data-x="-1200" data-y="2800">
+      <code>requestAnimationFrame</code>
+      <iframe src="frames/raf.html"></iframe>
+    </div>
+    
+    <div id="fan" class="step" data-x="2800" data-y="0" data-rotate="90">
+      <iframe src="frames/fan.html"></iframe>
+    </div>
+    
+    <div id="raf-browsers" class="step" data-x="1800" data-y="200" data-rotate="270">
+      <ul class="browsers">
+        <li class="chrome">21</li>
+        <li class="safari">6</li>
+        <li class="firefox">15</li>
+        <li class="opera dim"></li>
+        <li class="ie">10</li>
+      </ul>
     </div>
     
     <div id="thanks" class="step" data-x="-2500" data-y="3500" data-rotate="360">
@@ -241,8 +205,12 @@
       <a href="http://twitter.com/lvivski" class="tw" target="_blank">@lvivski</a><br>
     </div>
     
-    <div id="overview" class="step" data-x="300" data-y="2000" data-scale="6"></div>
+    <div id="pseudo" class="step" data-x="-2800" data-y="2500" data-rotate="90">
+      <h3>Pseudo-elements animation</h3>
+      <iframe src="frames/pseudo.html"></iframe>
+    </div>
     
+    <div id="overview" class="step" data-x="300" data-y="2000" data-scale="6"></div>
 </div>
 
 <script src="js/impress.js"></script>

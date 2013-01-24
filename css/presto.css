@@ -177,56 +177,38 @@ li {
   margin-bottom: 1em;
 }
 
+iframe {
+  width: 100%;
+  height: 500px;
+  background: white;
+  display: block;
+}
+
 .step {
-    position: relative;
-    width: 900px;
-    padding: 40px;
-    margin: 20px auto;
+  position: relative;
+  width: 900px;
+  padding: 40px;
+  margin: 20px auto;
 
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing:    border-box;
-    box-sizing:         border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  box-sizing:         border-box;
 
-    font-size: 48px;
-    line-height: 1.5;
+  font-size: 48px;
+  line-height: 1.5;
 }
 
 .impress-enabled .step {
-    margin: 0;
-    opacity: 0.05;
+  margin: 0;
+  opacity: 0.05;
 
-    -webkit-transition: opacity .5s;
-    -moz-transition:    opacity .5s;
-    transition:         opacity .5s;
+  -webkit-transition: opacity .5s;
+  -moz-transition:    opacity .5s;
+  transition:         opacity .5s;
 }
 
 .impress-enabled .step.active {
   opacity: 1
-}
-
-#js {
-  color: #111;
-}
-
-.impress-on-js {
-  background-color: #f0dc22;
-}
-
-#cache {
-  padding-top: 300px;
-}
-
-.impress-on-cache {
-  background-image: url(../img/superman.jpg);
-  background-color: #d0bba6;
-  background-repeat: no-repeat;
-  background-size: 90%;
-  background-position:top center;
-}
-
-#store ul,
-#store li {
-  width:100%;
 }
 
 .best {
@@ -239,47 +221,6 @@ li {
 
 .worst {
   color: #c00;
-}
-
-#store span {
-  float: right;
-}
-
-#oldschool {
-  text-align:center;
-}
-
-.impress-on-highlander {
-  background-image: url(../img/highlander.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position:center;
-}
-
-#highlander h3 {
-  margin-top: 5em;
-  color:white;
-}
-
-#overview {
-  display: none
-}
-
-.impress-on-overview .step {
-  opacity: 1;
-  cursor: pointer;
-}
-
-
-#appcache code {
-  margin-bottom: 1em;
-}
-
-.impress-on-newera {
-  background-image: url(../img/html5.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position:center;
 }
 
 .chrome, .safari, .firefox, .opera, .ie {
@@ -316,65 +257,12 @@ li {
   opacity: 0.3;
 }
 
-
-#api {
-  font-size: 2.2em;
-}
-
-#fsrequest {
-  font-size: 2.5em;
-}
-
-
-#storage {
-  font-size: 2em;
-}
-
-#bench, #fs-browsers, #appcache-browsers {
-  text-align:center;
-}
-
-#bench .bench {
-  visibility:hidden;
-  opacity: 0;
-  -webkit-transition: opacity .5s 10s;
-  -moz-transition: opacity .5s 10s;
-  transition: opacity .5s 10s;
-}
-
-
-#bench.present .bench {
-  visibility: visible;
-  opacity: 1;
-}
-
-#demo {
-  text-align: center;
-  font-size: 6em;
-}
-
 .button {
   text-decoration: none;
   border: .05em solid;
   border-radius: 1em;
   padding: .1em .5em;
   font-family: "HelveticaNeue-UltraLight";
-}
-
-.twitter, .facebook, .gmail {
-  font-family: "HelveticaNeue";
-}
-
-.twitter {
-  color: #45adea;
-}
-
-.facebook {
-  color: #3b5a9b;
-}
-
-.gmail {
-  color: #d15a48;
 }
 
 .mobile:before {
@@ -396,25 +284,76 @@ li {
   font-size: 2em;
 }
 
-.fallback-message {
-    line-height: 1.3;
-    font-family: sans-serif;
-    
-    width: 780px;
-    padding: 10px 10px 0;
-    margin: 20px auto;
+div[id$="browsers"] {
+  text-align: center;
+}
 
-    border: 1px solid #E4C652;
-    border-radius: 10px;
-    background: #EEDC94;
+
+#gif {
+  text-align: center;
+}
+
+.impress-on-gif {
+  background-color: #000;
+}
+
+#apple {
+  text-align: center;
+  font-size: 4em;
+}
+
+#js {
+  color: #111;
+}
+
+.impress-on-js {
+  background-color: #f0dc22;
+}
+
+.impress-on-newera {
+  background-image: url(../img/html5.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position:center;
+}
+
+#transtion pre,
+#animation pre {
+  max-height: 400px;
+}
+
+#vexel {
+  text-align: center;
+  font-size: 6em;
+}
+
+#overview {
+  display: none;
+}
+
+.impress-on-overview .step {
+  opacity: 1;
+}
+
+.fallback-message {
+  line-height: 1.3;
+  font-family: sans-serif;
+    
+  width: 780px;
+  padding: 10px 10px 0;
+  margin: 20px auto;
+
+  border: 1px solid #E4C652;
+  border-radius: 10px;
+  background: #EEDC94;
 }
 
 .fallback-message p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .impress-supported .fallback-message {
-    display: none;
+  display: none;
 }
 
 .impress-enabled          { pointer-events: none }
