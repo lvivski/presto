@@ -276,39 +276,29 @@ iframe {
   text-stroke: .1em #666;
 }
 
-#thanks {
+div[id$="browsers"] {
   text-align: center;
+}
+
+#thanks, #intro, #os, #anima, #animation-demo, #cards {
+  text-align: center;
+}
+
+#animation-demo, #cards {
+  font-size: 500%;
+}
+
+#transtion pre,
+#animation pre {
+  max-height: 400px;
 }
 
 .tw {
   font-size: 2em;
 }
 
-div[id$="browsers"] {
-  text-align: center;
-}
-
-
-#gif {
-  text-align: center;
-}
-
-.impress-on-gif {
-  background-color: #000;
-}
-
-#apple,
-#raf-example {
-  text-align: center;
-  font-size: 4em;
-}
-
-#js {
-  color: #111;
-}
-
-.impress-on-js {
-  background-color: #f0dc22;
+li span {
+  float: right;
 }
 
 .impress-on-newera {
@@ -318,16 +308,14 @@ div[id$="browsers"] {
   background-position:center;
 }
 
-#transtion pre,
-#animation pre {
-  max-height: 400px;
+.impress-on-matrix {
+  background-image: url(../img/matrix.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position:center;
 }
 
-#vexel,
-#isomer {
-  text-align: center;
-  font-size: 6em;
-}
+
 
 #overview {
   display: none;
