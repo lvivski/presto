@@ -18,12 +18,17 @@
 </div>
 <div id="impress" data-transition-duration="500">
   
-    <div id="title" class="step" data-x="0" data-y="0">
-      <h1>Everything</h1>
+  <div id="intro" class="step" data-x="-2500" data-y="2500" data-rotate="90">
+    <h2>Yehor Lvivski</h2><br>
+    <a href="http://twitter.com/lvivski" class="tw" target="_blank">@lvivski</a><br>
+  </div>
+  
+    <div id="title" class="step" data-x="0" data-y="-400">
+      <h1>Everything Animated 2</h1>
     </div>
     
     <div id="alt-title" class="step" data-x="0" data-y="400" data-rotate="-90">
-      <h2>Animated</h2>
+      <h2>The Matrix strikes back</h2>
     </div>
     
     <div id="wiki" class="step" data-x="-600" data-y="400">
@@ -49,9 +54,8 @@
       <h2>JavaScript</h2>
     </div>
     
-    <div id="clock" class="step" data-x="0" data-y="-800">
-      <h3>Clock</h3>
-      <iframe src="frames/clock.html"></iframe>
+    <div id="jquery" class="step" data-x="0" data-y="-1600">
+      <h2 style="font-size: 2em"><code>$.fn.animate()</code></h2>
     </div>
     
     <div id="newera" class="step" data-x="-2800" data-y="3000"></div>
@@ -111,12 +115,19 @@
       <pre>
         <code>transition:  [</code>
         <code>  &lt;<mark>property</mark>&gt; ||</code>
-        <code>  &lt;<mark>duration</mark>&gt; ||</code>
+        <code>  &lt;duration&gt; ||</code>
         <code>  &lt;<mark>timing-function</mark>&gt; ||</code>
-        <code>  &lt;<mark>delay</mark>&gt; ]</code>
+        <code>  &lt;delay&gt; ]</code>
       </pre>
       <br>
       <a href="http://www.w3.org/TR/css3-transitions/" target="_blank">CSS Transitions</a>
+    </div>
+    
+    <div id="transitions-example" class="step" data-x="3500" data-y="2000" data-rotate="-90">
+      <h3>Transition example</h3>
+      <div class="plain">
+        <div class="block"></div>
+      </div>
     </div>
     
     <div id="transition-browsers" class="step" data-x="0" data-y="2700">
@@ -133,36 +144,39 @@
       <h3>Animations</h3>
       <pre>
         <code>animaton:  [</code>
-        <code>  &lt;<mark>name</mark>&gt; ||</code>
-        <code>  &lt;<mark>duration</mark>&gt; ||</code>
+        <code>  &lt;<mark>animation-name</mark>&gt; ||</code>
+        <code>  &lt;duration&gt; ||</code>
         <code>  &lt;<mark>timing-function</mark>&gt; ||</code>
-        <code>  &lt;<mark>delay</mark>&gt; ||</code>
-        <code>  &lt;<mark>iteration-count</mark>&gt; ||</code>
-        <code>  &lt;<mark>direction</mark>&gt; ||</code>
-        <code>  &lt;<mark>fill-mode</mark>&gt; ]</code>
+        <code>  &lt;delay&gt; ||</code>
+        <code>  &lt;iteration-count&gt; ||</code>
+        <code>  &lt;direction&gt; ||</code>
+        <code>  &lt;fill-mode&gt; ]</code>
       </pre>
       <br>
       <a href="http://www.w3.org/TR/css3-animations/" target="_blank">CSS Animations</a>
+    </div>
+    
+    <div id="easings" class="step" data-x="-3400" data-y="2500" data-rotate="90">
+      <h3>Easings</h3>
+      <iframe src="frames/easings.html"></iframe>
     </div>
     
     <div id="animation-keyframes" class="step" data-x="-2800" data-y="1100">
       <h3>Keyframes</h3>
       <pre>
         <code>@keyframes <mark>animation-name</mark> {</code>
-        <code>0%, 100% {<mark>...</mark>}</code>
-        <code><mark>from, to</mark> {<mark>...</mark>}</code>
-        <code>50% {<mark>...</mark>}</code>
+        <code>0%, 100% {...}</code>
+        <code><mark>from, to</mark> {...}</code>
+        <code>50% {...}</code>
         <code>}</code>
       </pre>
     </div>
     
-    <div id="animation-events" class="step" data-x="-1200" data-y="1100">
-      <h3>Animations Events</h3>
-      <ul>
-        <li><code>animationstart</code></li>
-        <li><code>animationend</code></li>
-        <li><code>animationiteration</code></li>
-      </ul>
+    <div id="animation-examples" class="step" data-x="-1200" data-y="1100">
+      <h3>Animations Examples</h3>
+      <div class="plain">
+        <div class="ball"></div>
+      </div>
     </div>
     
     <div id="animation-browsers" class="step" data-x="-2000" data-y="1100" data-rotate="-90">
@@ -176,7 +190,7 @@
     </div>
     
     <div id="vexel" class="step" data-x="-2000" data-y="2000">
-      <a class="button" target="_blank" href="http://lvivski.github.com/vexel/">Vexel</a>
+      <a class="button" target="_blank" href="vexel/index.html">Vexel</a>
     </div>
     
     <div id="animation-demo" class="step" data-x="0" data-y="3300" data-rotate="180">
@@ -184,7 +198,8 @@
     </div>
     
     <div id="bitmap" class="step" data-x="0" data-y="4000" data-rotate="0">
-      <h2>Canvas is Bitmap!</h2>
+      <h2>Canvas</h2>
+      <p>Canvas is Bitmap</p>
     </div>
     
     <div id="canvas" class="step" data-x="-1200" data-y="3800" data-rotate="90">
@@ -193,17 +208,7 @@
         <li><code>getContext('2d')</code></li>
         <li><code>arc</code>, <code>stroke</code>, <code>fill</code>, <code>...</code></li>
         <li><code>scale</code>, <code>rotate</code>, <code>translate</code>, <code>transform</code></li>
-        <li><code><mark>drawImage</mark></code></li>
-      </ul>
-    </div>
-    
-    <div id="canvas-opt" class="step" data-x="1200" data-y="4000" data-rotate="0">
-      <h3>Canvas</h3>
-      <ul>
-        <li>Redraw Regions</li>
-        <li>Procedural Sprites</li>
-        <li>Multi-layered Canvas</li>
-        <li>rAF</li>
+        <li><code>drawImage</code></li>
       </ul>
     </div>
     
@@ -225,10 +230,6 @@
       <iframe src="frames/raf.html"></iframe>
     </div>
     
-    <div id="fan" class="step" data-x="2800" data-y="0" data-rotate="90">
-      <iframe src="frames/fan.html"></iframe>
-    </div>
-    
     <div id="raf-example" class="step" data-x="3200" data-y="1000" data-rotate="0">
       <a class="button" target="_blank" href="frames/anim.html">rAF</a>
       <a class="button" target="_blank" href="frames/optanim.html">rAF (optimized)</a>
@@ -244,17 +245,39 @@
       </ul>
     </div>
     
+    <div id="bad-parts" class="step" data-x="2800" data-y="0" data-rotate="90">
+      <h3>CSS animations, Bad parts</h3>
+      <ul>
+        <li>Not easy to stop animation once started</li>
+        <li>You have to deal with percents</li>
+        <li>Limited user control</li>
+      </ul>
+    </div>
+    
+    <div id="anima" class="step" data-x="1200" data-y="4000" data-rotate="0">
+      <h3>anima.js</h3>
+      <ul>
+        <li>uses durations and delays</li>
+        <li>has more predefined easings</li>
+        <li>can generate pure CSS animations</li>
+        <li>uses rAF</li>
+      </ul>
+    </div>
+    
+    <div id="matrix" class="step" data-x="3500" data-y="4000" data-rotate="-90">
+      <a href="examples/keyboard.html" target="_blank" class="button">matrix</a>
+    </div>
+    
+    <div id="anima-link" class="step" data-x="2500" data-y="4000" data-rotate="90">
+      <a href="http://github.com/lvivski/anima" class="gh" target="_blank">lvivski/anima</a><br>
+    </div>
+    
     <div id="thanks" class="step" data-x="-2500" data-y="3500" data-rotate="360">
       <h2>Thanks</h2><br>
-      <a href="http://twitter.com/lvivski" class="tw" target="_blank">@lvivski</a><br>
+      <a href="http://github.com/lvivski" class="gh" target="_blank">lvivski</a><br>
     </div>
     
-    <div id="pseudo" class="step" data-x="-2800" data-y="2500" data-rotate="90">
-      <h3>Pseudo-elements animation</h3>
-      <iframe src="frames/pseudo.html"></iframe>
-    </div>
-    
-    <div id="overview" class="step" data-x="300" data-y="2000" data-scale="6"></div>
+    <div id="overview" class="step" data-x="300" data-y="2000" data-scale="8"></div>
 </div>
 
 <script src="js/impress.js"></script>

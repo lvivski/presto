@@ -47,11 +47,11 @@ button {
 
 .face {
   position: absolute;
-  background: #3AB666;
+  background: #356FC7;
 }
 
 .back {
-  background: #356FC7;
+  background: #3AB666;
   -webkit-transform: rotateY(180deg);
 }
 
@@ -61,19 +61,19 @@ button {
 
 @-webkit-keyframes wobble {
   15% {
-    -webkit-transform: translateX(40px);
+    -webkit-transform: translateX(60px);
   }
   30% {
-    -webkit-transform: translateX(-30px);
+    -webkit-transform: translateX(-50px);
   }
   45% {
-    -webkit-transform: translateX(20px);
+    -webkit-transform: translateX(30px);
   }
   60% {
-    -webkit-transform: translateX(-10px);
+    -webkit-transform: translateX(-30px);
   }
   75% {
-    -webkit-transform: translateX(5px);
+    -webkit-transform: translateX(10px);
   }
   90% {
     -webkit-transform: translateX(0px);
@@ -95,8 +95,12 @@ button {
     -webkit-transform: translateX(-200%);
   }
   
+  75% {
+    -webkit-transform: translateX(20%);
+  }
+  
   85% {
-    -webkit-transform: translateX(10%);
+    -webkit-transform: translateX(-10%);
   }
 }
 
@@ -104,7 +108,7 @@ button {
 }
 
 .container.wobble .card {
-  -webkit-animation: wobble .3s;
+  -webkit-animation: wobble .5s;
 }
 
 .container.slide .card {
@@ -112,11 +116,11 @@ button {
 }
 
 .container.slidewithinertia .card {
-  -webkit-animation: 'slidewithinertia' .5s ease-out;
+  -webkit-animation: 'slidewithinertia' .5s ease-in;
 }
 .container.slideskew .card {
   -webkit-transform: skewX(5deg);
-  -webkit-animation: 'slidewithinertia' .5s ease-out;
+  -webkit-animation: 'slidewithinertia' .5s ease-in;
 }
 </style>
 <script>
