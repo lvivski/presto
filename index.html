@@ -270,6 +270,61 @@
       <a href="examples/keyboard.html" target="_blank" class="button">matrix</a>
     </div>
     
+    <div id="how" class="step" data-x="3600" data-y="3000" data-rotate="90">
+      <h2>How it works</h2>
+    </div>
+    
+    <div id="matrix" class="step" data-x="3800" data-y="4000" data-rotate="90">
+      
+    </div>
+    
+    <div id="matrix3d" class="step" data-x="3800" data-y="0" data-rotate="0">
+      <pre>
+      <code>matrix3d(</code>
+      <code>  1, 0, 0, 0,</code>
+      <code>  0, 1, 0, 0,</code>
+      <code>  0, 0, 1, 0,</code>
+      <code>  0, 0, 0, 1</code>
+      <code>)</code>
+      </pre>
+    </div>
+    
+    <div id="matrix3d-values" class="step" data-x="3800" data-y="-1000" data-rotate="0">
+      <h3><code>scale</code> and <code>translate</code></h3>
+      <pre>
+      <code>matrix3d(</code>
+      <code>  <mark>sX</mark>,   0,   0, 0,</code>
+      <code>    0, <mark>sY</mark>,   0, 0,</code>
+      <code>    0,   0, <mark>sZ</mark>, 0,</code>
+      <code>  <mark>tX</mark>, <mark>tY</mark>, <mark>tZ</mark>, 1</code>
+      <code>)</code>
+      </pre>
+    </div>
+    
+    <div id="matrix-rotate" class="step" data-x="4800" data-y="-1000" data-rotate="0">
+      <pre>
+      <code>matrix3d(</code>
+      <code>  cos(Y)cos(Z),</code>
+      <code>  cos(X)*cos(Z)</code>
+      <code>  +sin(X)sin(Y)cos(Z),</code>
+      <code>  sin(X)sin(Z)</code>
+      <code>  -cos(X)sin(Y)cos(Z), 0,</code>
+      <code>  ...</code>
+      <code>)</code>
+      </pre>
+    </div>
+    
+    <div id="decomposition" class="step" data-x="4800" data-y="1200" data-rotate="0">
+      <h2>Decomposition</h2>
+    </div>
+    
+    <div id="matrix-decompozition" class="step" data-x="4800" data-y="0" data-rotate="0">
+      <h3>Matrix decomposition</h3>
+      <ul>
+        <li><code>A×B</code><mark>≠</mark><code>B×A</code></li>
+        <li><code>scale</code>×<code>rotate</code>×<code>translate</code></li>
+    </div>
+    
     <div id="anima-link" class="step" data-x="2500" data-y="4000" data-rotate="90">
       <a href="http://github.com/lvivski/anima" class="gh" target="_blank">lvivski/anima</a><br>
     </div>
@@ -281,7 +336,7 @@
       <a href="http://github.com/lvivski" class="gh" target="_blank">lvivski</a><br>
     </div>
     
-    <div id="overview" class="step" data-x="300" data-y="2000" data-scale="8"></div>
+    <div id="overview" class="step" data-x="800" data-y="1600" data-scale="8"></div>
 </div>
 
 <script src="js/impress.js"></script>
