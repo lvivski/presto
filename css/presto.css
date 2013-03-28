@@ -173,6 +173,10 @@ pre code:before {
   opacity: .2;
 }
 
+h3 + pre {
+  max-height: 400px;
+}
+
 li {
   margin-bottom: 1em;
 }
@@ -276,15 +280,11 @@ iframe {
   text-stroke: .1em #666;
 }
 
-#thanks, #intro, #bitmap {
-  text-align: center;
-}
-
-.tw, .gh {
+.big {
   font-size: 2em;
 }
 
-.gh {
+.github {
   background: url(../img/github.png) no-repeat 0 0;
   background-size: 200px;
   padding: 50px;
@@ -294,7 +294,7 @@ iframe {
   
 }
 
-div[id$="browsers"] {
+.center, div[id$="browsers"] {
   text-align: center;
 }
 
@@ -305,88 +305,18 @@ div[id$="browsers"] {
   position: relative;
 }
 
-.block {
-  position: absolute;
-  left: 25px;
-  top: 25px;
-  width: 200px;
-  height: 200px;
-  background: #5596F6;
-  -webkit-transition: -webkit-transform 1s linear 1s,
-                      background-color 1s linear 1.5s;
-}
-
-.ball {
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  left: 50%;
-  margin-left:-125px;
-  top: 50px;
-  border-radius: 50%;
-  -webkit-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-  background: -webkit-radial-gradient(40px 40px, circle, #D7E7F1 0%, #AFD3EE 10%, #6DA9D5 20%, #238FE2 30%, #2081CB 50%, #0E5D99 70%);
-  background: radial-gradient(40px 40px, circle, #D7E7F1 0%, #AFD3EE 10%, #6DA9D5 20%, #238FE2 30%, #2081CB 50%, #0E5D99 70%);
-  border: none;
-}
-
-.impress-on-animation-examples .ball  {
-  -webkit-animation: bounce 1s infinite 1s;
-}
-
-.impress-on-transitions-example .block {
-  -webkit-transform: translateX(400px) translateY(250px) rotateY(359deg);
-  background-color: #DB4444;
-}
-
-@-webkit-keyframes bounce { 
-  0% { -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53); }
-  45.455% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 300, 0, 1); -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1); }
-  50% { -webkit-transform: matrix3d(1.1, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, 0, 300, 0, 1); -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1); }
-  54.545% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 300, 0, 1); -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-  100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-}
-
-#gif {
-  text-align: center;
-}
-
-.impress-on-gif {
-  background-color: #000;
-}
-
-#apple,
-#raf-example {
-  text-align: center;
-  font-size: 4em;
-}
-
-#js {
-  color: #111;
-}
-
-.impress-on-js {
-  background-color: #f0dc22;
-}
-
-.impress-on-newera {
+.impress-on-html5 {
   background-image: url(../img/html5.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position:center;
 }
 
-#transtion pre,
-#animation pre {
-  max-height: 400px;
-}
-
-#vexel,
-#isomer,
-#matrix {
-  text-align: center;
-  font-size: 6em;
+.impress-on-back-to-future {
+  background-image: url(../img/back-to-the-future.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position:center;
 }
 
 #overview {
