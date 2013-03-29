@@ -207,11 +207,24 @@
         <code>document
   .querySelector('#host')
   .<mark>createShadowRoot()</mark>
-  .innerHTML = '&lt;div>\</code>
-        <code> &lt;div <mark>pseudo</mark>="<mark>x-pseudo</mark>">\
-  &lt;/div>\</code>
-        <code>&lt;/div>'</code>
+  .innerHTML = 
+  '&lt;div <mark>pseudo</mark>="<mark>x-pseudo</mark>">\
+  &lt;/div>'</code>
         <code>&lt;/script></code>
+      </pre>
+    </div>
+    
+    <div id="shadow-vars" class="step" data-x="-4000" data-y="4000" data-rotate="90">
+      <h3>CSS Variables</h3>
+      <pre>
+        <code>x-tag {</code>
+        <code>  color: var(<mark>tag-color</mark>);</code>
+        <code>  font: var(<mark>tag-font</mark>)}</code>
+      </pre><br>
+      <pre>
+        <code>#host {</code>
+        <code>  var-<mark>tag-color</mark>: blue;</code>
+        <code>  var-<mark>tag-font</mark>: sans-serif}</code>
       </pre>
     </div>
 
