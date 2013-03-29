@@ -143,7 +143,7 @@
     <div id="noob" class="step" data-x="-1600" data-y="800" data-rotate="90">
       <img src="img/noobsaibot.jpg" width="100%">
     </div>
-    
+
     <div id="shadowdom" class="step" data-x="1800" data-y="1200" data-rotate="90">
       <h3>Shadow DOM</h3>
       <ul>
@@ -152,19 +152,19 @@
         <li>styling hooks (custom pseudo els)</li>
         <li><code>@host</code> at-rule<li>
     </div>
-    
+
     <div id="video" class="step center" data-x="2700" data-y="0">
       <video controls height="300" style="background: #000"></video>
     </div>
-    
+
     <div id="shadow-trees" class="step" data-x="2700" data-y="1000" data-rotate="180">
       <img src="img/shadow-trees.svg" style="width: 100%;">
     </div>
-    
+
     <div id="shadow-render" class="step" data-x="2700" data-y="1800" data-rotate="90">
       <img src="img/shadow-rendering.svg" style="width: 100%;">
     </div>
-    
+
     <div id="shadow-example" class="step" data=x="0" data-y="2700">
       <h3>Shadow DOM</h3>
       <pre>
@@ -180,7 +180,7 @@
         <code>shadow.innerHTML = '&lt;div>Shadow DOM&lt;/div>'</code>
       </pre>
     </div>
-    
+
     <div id="shadow-playground" class="step" data-x="-1000" data-y="2700" data-rotate="90">
       <div id="shadow-host">
         <h1>Normal DOM</h1>
@@ -194,7 +194,7 @@
         // shadow.applyAuthorStyles = true
       </script>
     </div>
-    
+
     <div id="shadow-pseudo" class="step" data-x="-2000" data-y="1800" data-rotate="-90">
       <h3>Shadow Pseudo</h3>
       <pre>
@@ -215,11 +215,11 @@
         <code>&lt;/script></code>
       </pre>
     </div>
-    
+
     <div id="shadow-insertion" class="step" data-x="1500" data-y="2400" style="overflow:scroll;height:500px">
       <img src="img/insertion-points.svg" style="width: 100%;">
     </div>
-    
+
     <div id="shadow-content" class="step" data-x="-2000" data-y="2900" data-rotate="180">
       <pre style="max-height: 300px">
         <code>&lt;div id="host"></code>
@@ -237,7 +237,7 @@
         <code>&lt;h2content select="<mark>*</mark>">&lt;/content></code>
       </pre>
     </div>
-    
+
     <div id="custom-elements" class="step" data-x="-2500" data-y="800">
       <pre style="max-height: 300px">
         <code>&lt;<mark>element</mark> name="<mark>x-tag</mark>"></code>
@@ -255,7 +255,7 @@
         <code>&lt;/x-tag></code>
       </pre>
     </div>
-    
+
     <div id="custom-elements-js" class="step" data-x="-3000" data-y="1600" data-rotate="180">
       <pre style="max-height: 300px">
         <code>&lt;element name="x-tag"
@@ -278,7 +278,7 @@
       </pre>
     </div>
 
-    <div id="transform-browsers" class="step" data-x="0" data-y="1600">
+    <div id="shadow-browsers" class="step" data-x="0" data-y="1600">
       <ul class="browsers">
         <li class="chrome">25</li>
         <li class="safari dim"></li>
@@ -288,12 +288,139 @@
       </ul>
     </div>
 
+    <div id="layout" class="step" data-x="0" data-y="3500" data-rotate="90">
+      <h2>Layout</h2>
+    </div>
+
+    <div id="flexgrid" class="step" data-x="-2000" data-y="3600">
+      <img src="img/flexgrid.jpg" width="100%">
+    </div>
+
+    <div id="css" class="step" data-x="1000" data-y="3500">
+      <h3>CSS</h3>
+      <ul>
+        <li><code>&lt;table></code></li>
+        <li><code>position: absolute</code></li>
+        <li><code>float: left</code></li>
+        <li><code>clear: both</code></li>
+      </ul>
+    </div>
+
+    <div id="css-gif" class="step" data-x="-1000" data-y="3500" data-rotate="-90">
+      <img src="img/css.gif" width="100%">
+    </div>
+
+    <div id="flexbox" class="step" data-x="1800" data-y="3500" data-rorate="0">
+      <h2>Flexbox</h2>
+    </div>
+
+    <div id="flex-features" class="step" data-x="2800" data-y="3500" data-rotate="90">
+      <h3>Features</h3>
+      <ul>
+        <li>Similar to block model</li>
+        <li>Flow direction can be up/down/left/right</li>
+        <li>Display order can be reversed</li>
+        <li>Elements can <code>flex</code> their size</li>
+      </ul>
+    </div>
+
+    <div id="flex" class="step" data-x="-3000" data-y="3000" data-rotate="-90">
+      <h3>Flexbox (new syntax)</h3>
+      <pre>
+        <code>display: -ms-flexbox</code>
+        <code>display: flex</code>
+        <code>display: <mark>inline</mark>-flex</code>
+        <code>flex-flow: &lt;flex-<mark>direction</mark>>
+    || &lt;flex-<mark>wrap</mark>></code>
+      </pre>
+      <a href="http://www.w3.org/TR/css3-flexbox/" target="_blank">CSS Flexible Box Layout Module</a>
+    </div>
+
+    <div id="flex-items" class="step" data-x="-3000" data-y="0" data-rotate="180">
+      <h3>Flex element</h3>
+      <pre>
+        <code>flex: &lt;flex-<mark>grow</mark>>
+    &lt;flex-<mark>shrink</mark>>
+    || &lt;flex-<mark>basis</mark>></code>
+        <code>order: 2</code>
+      </pre>
+    </div>
+
+    <div id="flex-justify" class="step" data-x="3600" data-y="0" data-rotate="90">
+      <h3><code>justify-content</code></h3>
+      <img src="img/flex-pack.svg" width="100%">
+    </div>
+
+    <div id="flex-align" class="step center" data-x="3800" data-y="1200" data-rotate="180">
+      <h3><code>align-items</code> & <code>align-self</code></h3>
+      <img src="img/flex-align.svg" width="80%">
+    </div>
+
+    <div id="flex-align-content" class="step center" data-x="3800" data-y="2500">
+      <h3><code>align-content</code></h3>
+      <img src="img/align-content.svg" width="80%">
+    </div>
+
+    <div id="flex-browsers" class="step" data-x="3800" data-y="3800" data-rotate="-90">
+      <ul class="browsers">
+        <li class="chrome">22</li>
+        <li class="safari dim"></li>
+        <li class="firefox">nightly</li>
+        <li class="opera">12.1</li>
+        <li class="ie">10</li>
+      </ul>
+    </div>
+
+    <div id="grid" class="step" data-x="-4000" data-y="0" data-rotate="90">
+      <h2>Grid</h2>
+    </div>
+
+    <div id="grid-layout" class="step" data-x="-4000" data-y="800" data-rotate="0">
+      <h3>Grid layout</h3>
+      <pre>
+        <code>display: grid;</code>
+        <code>grid-definition-<mark>columns</mark>:
+    200px <mark>1fr</mark> 200px;</code>
+        <code>grid-definition-<mark>rows</mark>: auto;</code>
+      </pre>
+      <br>
+      <pre>
+        <code>grid-<mark>row</mark>: &lt;<mark>position</mark>> &lt;<mark>span</mark>>;</code>
+        <code>grid-<mark>column</mark>: 1 2;</code>
+      </pre>
+    </div>
+
+    <div id="grid-template" class="step" data-x="-4000" data-y="2000" data-rotate="-90">
+      <h3>Grid template</h3>
+      <pre>
+        <code>.grid {</code>
+        <code>  display: grid;</code>
+        <code>  grid-<mark>template</mark>:"head head"</code>
+        <code>                 "nav  main"</code>
+        <code>                 "foot foot"</code>
+        <code>}</code>
+        <code>.grid > a {</code>
+        <code>  grid-<mark>area</mark>: "<mark>nav</mark>";</code>
+        <code>}</code>
+      </pre>
+    </div>
+
+    <div id="grid-browsers" class="step" data-x="-4000" data-y="2800" data-rotate="180">
+      <ul class="browsers">
+        <li class="chrome dim"></li>
+        <li class="safari dim"></li>
+        <li class="firefox dim"></li>
+        <li class="opera dim"></li>
+        <li class="ie">10</li>
+      </ul>
+    </div>
+
     <div id="thanks" class="step center" data-x="-1000" data-y="0" data-rotate="180">
       <h2>Thanks</h2><br>
       <a href="http://github.com/lvivski" class="github big" target="_blank">lvivski</a><br>
     </div>
 
-    <div id="overview" class="step" data-x="300" data-y="2000" data-scale="8"></div>
+    <div id="overview" class="step" data-x="0" data-y="1600" data-scale="8"></div>
 </div>
 <script src="js/impress.js"></script>
 <script>
