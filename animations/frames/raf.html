@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Why rAf Matters</title>
+    <style>
+      * {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 16pt;
+      }
+      h1 {
+        font-size: 16pt;
+      }
+      #a, #b, #c {
+        margin-bottom: 20px;
+      }
+      div.label {
+        margin-bottom: 0.6em;
+      }
+      
+      input[type=range] {
+        -webkit-appearance: none;
+        height: 1px;
+        background: #666;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="a">
+      <div class="label">
+        <label for="display-refresh">Display refresh rate:</label>
+        <input id="display-refresh" type="range" min="50" max="70" value="60" step="1"></input>
+        (<span id="cur-display-refresh">xxx</span> Hz)
+      </div>
+      <canvas id="canvas0" width="5000" height="40"></canvas>
+    </div>
+
+    <div id="c" style="display:block">
+      <div class="label">
+        <label>requestAnimationFrame:</label>
+      </div>
+      <canvas id="canvas2" width="5000" height="60"></canvas>
+    </div>
+
+    <script>
+      function line(ctx, x1, y1, x2, y2, color) {
+        ctx.strokeStyle = color;
+        ctx.beginPath();
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        ctx.stroke();
+      }
+      function arrow(ctx, x1, y1, x2, y2, color) {
+        line(ctx, x1, y1, x2, y2, color);
+        var dx = x2 - x1;
+        var dy = y2 - y1;
+        var len = Math.sqrt(dx * dx + dy * dy);
+        var perc = (len - 10) / len;
+        var bx = x1 + perc * dx;
+        var by = y1 + perc * dy;
+        var ux = dx / len;
+        var uy = dy / len;
+        var ax = uy * 5;
+        var ay = -ux * 5;
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.moveTo(bx + ax, by + ay);
+        ctx.lineTo(x2, y2);
+        ctx.lineTo(bx - ax, by - ay);
+        ctx.lineTo(bx + ax, by + ay);
+        ctx.fill();
+      }
+
+      function niceRect(ctx, x, y, w, h, text) {
+        ctx.fillStyle = 'rgba(255,255,255,0.75)';
+        ctx.fillRect(x, y, w, h);
+
+        ctx.strokeStyle = 'rgba(0,0,0,1)';
+        ctx.strokeRect(x, y, w, h);
+
+        var tw = ctx.measureText(text).width;
+        ctx.textBaseline = 'middle';
+        ctx.fillStyle = 'rgba(0,0,0,1)';
+        ctx.fillText(text, x + 0.5 * w - 0.5 * tw, y + 0.5 * h);
+      }
+
+      function redraw() {
+        var canvas0 = document.querySelector('#canvas0');
+        var w = canvas0.width;
+        var h0 = canvas0.height;
+
+        var ctx0 = canvas0.getContext('2d');
+        ctx0.clearRect(0, 0, w, h0);
+
+
+        var canvas2 = document.querySelector('#canvas2');
+        if (canvas2.width != canvas0.width)
+          canvas2.width = canvas0.width;
+        var ctx2 = canvas2.getContext('2d');
+        var h = canvas2.height;
+        ctx2.clearRect(0, 0, w, h);
+
+
+        var px_per_ms = 60 / (1000 / 60);
+        var cur_vsync = document.querySelector('#display-refresh').value;
+        document.querySelector('#cur-display-refresh').textContent = cur_vsync;
+        var vsync_width = (1000 / cur_vsync) * px_per_ms;
+
+        var N = Math.ceil(w / vsync_width);
+        for (var i = 0; i < N; i++)
+          line(ctx0, i*vsync_width, 0, i*vsync_width, h, 'rgba(0,0,255,1.0)');
+
+        for (var i = 0; i < N; i++)
+          line(ctx2, i*vsync_width, 0, i*vsync_width, h, 'rgba(0,0,255,1.0)');
+
+        for (var i = 0; i < N; i++) {
+          var doneAt = (i+1)*vsync_width - 4;
+          var nearestVSync = Math.ceil(doneAt / vsync_width) * vsync_width;
+
+          var nextDoneAt = (i+2)*vsync_width - 4;
+          var nextNearestVSync = Math.ceil(nextDoneAt / vsync_width) * vsync_width;
+
+
+          niceRect(ctx2, i*vsync_width + 2, 10, vsync_width - 6, 30, 'raf');
+          arrow(ctx2, doneAt, 40, nearestVSync, 59, 'rgba(0,0,0,1)');
+        }
+
+      }
+
+      redraw();
+      document.querySelector('#display-refresh').addEventListener('change', redraw);
+    </script>
+  </body>
+</html>
