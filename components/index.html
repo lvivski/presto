@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Web Components</title>
+    <meta name="description" content="Level Next Web Apps" />
+    <meta name="author" content="Yehor Lvivski" />
+    <link href="css/presto.css" rel="stylesheet" />
+</head>
+<body class="impress-not-supported"><div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress" data-transition-duration="500">
+
+  <div id="intro" class="step center" data-x="1000" data-y="0" data-rotate="90">
+    <img src="img/avatar.png" width="250">
+    <h2>Yehor Lvivski</h2>
+    <a href="http://twitter.com/lvivski" class="big" target="_blank">@lvivski</a><br>
+  </div>
+
+  <div id="title" class="step" data-x="0" data-y="0">
+    <h1>Components for the Real World</h1>
+  </div>
+
+  <div id="wiki" class="step" data-x="-3000" data-y="-1000" data-rotate="-90">
+    <img src="img/wiki.png" width="100%">
+  </div>
+
+  <div id="facebook" class="step" data-x="1000" data-y="-1000" data-rotate="0">
+    <h3>Facebook</h3>
+    <img src="img/facebook.png" style="width:120%;margin-left:-10%">
+  </div>
+
+  <div id="delphi" class="step center" data-x="-800" data-y="800" data-rotate="0">
+    <h3>Delphi</h3>
+    <img src="img/delphi.png">
+  </div>
+
+  <div id="jquery" class="step center" data-x="-4000" data-y="800" data-rotate="-90">
+    <h3>jQuery Era</h3>
+    <code>$('input').<mark>datePicker</mark>()</code>
+  </div>
+
+  <div id="jquery-cons" class="step" data-x="-4000" data-y="-800" data-rotate="0">
+    <h3>jQuery Cons</h3>
+    <ul>
+      <li>Spaghetti</li>
+      <li>Styles should be added separately</li>
+      <li>Ease to break</li>
+    </ul>
+  </div>
+  
+  <div id="sencha" class="step" data-x="-4000" data-y="2000" data-rotate="90">
+    <h3>Sencha (ExtJS)</h3>
+    <ul>
+      <li>Separate markup tree</li>
+      <li>Over-verbose</li>
+      <li>Heavyweight</li>
+    </ul>
+  </div>
+
+    <div id="twitter" class="step center" data-x="-3000" data-y="-100" data-rotate="">
+      <h3>Twitter</h3>
+      <img src="img/bootstrap.png">
+      <img src="img/bower.png">
+    </div>
+  
+    <div id="bem" class="step" data-x="0" data-y="800" data-rotate="-90">
+      <h3>BEM</h3>
+      <code>BEM.block('<mark>date-picker</mark>', {<mark>...</mark>})</code>
+      <code>{block: '<mark>date-picker</mark>'}</code>
+    </div>
+
+    <div id="html5" class="step" data-x="3000" data-y="-1000"></div>
+
+    <div id="w3c" class="step" data-x="-200" data-y="-600">
+      <h2>W3C</h2>
+    </div>
+
+    <div id="web-components" class="step center" data-x="-900" data-y="-900" data-rotate="-90">
+      <h2>Web Components</h2>
+    </div>
+
+    <div id="xtag" class="step center" data-x="-1800" data-y="-600" data-rotate="0">
+      <code>&lt;<mark>x-</mark>button>WASSUP&lt;<mark>/x-</mark>button></code>
+      <x-button>
+        <style scoped>
+            button {
+              font-size: 35pt;
+              margin: 150px;
+            }
+            button:hover {
+              font-family: Courier, san-serif;
+              font-size: 60px;
+              font-weight: bold;
+              line-height: 1;
+              text-transform: uppercase;
+              border-radius: 50%;
+              border: 10px solid black;
+              width: 300px; /* default width and height */
+              height: 300px;
+              color: #222;
+              text-shadow: 0px 2px 3px #555;
+              background-color: #444;
+              /*-webkit-transition: border 600ms ease-in-out, background-color 200ms ease-in-out,
+                                  color 200ms ease-in-out;*/
+              -webkit-transition-property: border, background, font-size, color;
+              -webkit-transition-duration: 400ms;
+              -webkit-transition-timing-function: ease-in-out;
+              cursor: pointer;
+              background-image: -webkit-radial-gradient(50% 50%, circle closest-side, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
+              -webkit-filter: drop-shadow(8px 10px 10px rgba(0,0,0,0.5));
+              white-space: initial;
+
+              border: 25px solid black;
+              -webkit-transform: rotateZ(-15deg);
+              background-color: red;
+              color: white;
+              margin: 30px;
+            }
+          </style>
+          <button>HELLO!!1</button>
+      </x-button>
+    </div>
+
+    <div id="back-to-future" class="step" data-x="4500" data-y="-1000" data-rotate="90"></div>
+
+    <div id="parts" class="step" data-x="-1000" data-y="1800">
+      <h3>Web Components</h3>
+      <ul>
+        <li><code>&lt;template></code> — blueprint</li>
+        <li>Shadow DOM — encapsulation</li>
+        <li>Custom elements (<code>x-</code>) — toolbelt</li>
+      </ul>
+      <a href="http://www.w3.org/TR/components-intro/" target="_blank">Introduction to Web Components</a>
+    </div>
+
+    <div id="templates" class="step" data-x="1000" data-y="1800">
+      <h3>Templates</h3>
+      <ul>
+        <li><code>{{ mustache }}</code> <code>handlebars</code> <code>underscore.js</code></code>
+        <li><code>Jade</code> <code>EJS</code></li>
+      </ul>
+    </div>
+
+    <div id="string" class="step" data-x="0" data-y="2000">
+      <h2>HTML is not a String</h2>
+    </div>
+
+    <div id="template" class="step" data-x="1800" data-y="0" data-rotate="-90">
+      <pre>
+        <code>&lt;<mark>template</mark> id="awesome"></code>
+        <code>  &lt;img src=""></code>
+        <code>  &lt;div class="title">&lt;/div></code>
+        <code>&lt;/<mark>template</mark>></code>
+      </pre>
+      <a target="_blank" href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html">HTML Templates</a>
+    </div>
+
+    <div id="append" class="step" data-x="-1800" data-y="0">
+      <pre>
+        <code>var t = document
+    .querySelector('#awesome')</code>
+        <code>t.<mark>content</mark>
+    .querySelector('img')
+    .src = 'http://...'</code>
+        <code>document.body.appendChild(
+    t.content.<mark>cloneNode</mark>(true))</code>
+      </pre>
+    </div>
+
+    <div id="shadow-dom" class="step" data-x="900" data-y="800">
+      <h2>Shadow DOM</h2>
+    </div>
+
+    <div id="noob" class="step" data-x="-1600" data-y="800" data-rotate="90">
+      <img src="img/noobsaibot.jpg" width="100%">
+    </div>
+
+    <div id="shadowdom" class="step" data-x="1800" data-y="1200" data-rotate="90">
+      <h3>Shadow DOM</h3>
+      <ul>
+        <li>Encapsulation (styles, scripts)</li>
+        <li>Inserion points</li>
+        <li>styling hooks (custom pseudo els)</li>
+        <li><code>@host</code> at-rule<li>
+      </ul>
+      <a target="_blank" href="http://www.w3.org/TR/shadow-dom/">w3c spec</a>
+    </div>
+
+    <div id="video" class="step center" data-x="2700" data-y="0">
+      <video controls height="300" style="background: #000"></video>
+    </div>
+
+    <div id="shadow-trees" class="step" data-x="2700" data-y="1000" data-rotate="180">
+      <img src="img/shadow-trees.svg" style="width: 100%;">
+    </div>
+
+    <div id="shadow-render" class="step" data-x="2700" data-y="1800" data-rotate="90">
+      <img src="img/shadow-rendering.svg" style="width: 100%;">
+    </div>
+
+    <div id="shadow-example" class="step" data=x="0" data-y="2700">
+      <h3>Shadow DOM</h3>
+      <pre>
+        <code>&lt;div id="host"></code>
+        <code>&lt;h1>Normal DOM&lt;/h1></code>
+        <code>&lt;/div></code>
+      </pre>
+      <br>
+      <pre>
+        <code>var shadow = document
+    .querySelector('#host')
+    .createShadowRoot()</code>
+        <code>shadow.innerHTML = '&lt;div>Shadow DOM&lt;/div>'</code>
+      </pre>
+    </div>
+
+    <div id="shadow-playground" class="step" data-x="-1000" data-y="2700" data-rotate="90">
+      <div id="shadow-host">
+        <h1>Normal DOM</h1>
+      </div>
+      <script>
+        var shadow = document.querySelector('#shadow-host').webkitCreateShadowRoot()
+        shadow.innerHTML = '<div>Shadow DOM</div>'
+        // shadow.innerHTML += '<style>div {color: red}</style>'
+        // shadow.innerHTML += '<style>@host { * { background: blue } }</style>'
+        // shadow.resetStyleInheritance = true
+        // shadow.applyAuthorStyles = true
+      </script>
+    </div>
+
+    <div id="shadow-pseudo" class="step" data-x="-2000" data-y="1800" data-rotate="-90">
+      <h3>Shadow Pseudo</h3>
+      <pre>
+        <code>&lt;style></code>
+        <code>  #host<mark>::x-pseudo</mark> {</code>
+        <code>  color: blue</code>
+        <code>  }</code>
+        <code>&lt;/style></code>
+        <code>&lt;div id="host">&lt;/div></code>
+        <code>&lt;script></code>
+        <code>document
+  .querySelector('#host')
+  .<mark>createShadowRoot()</mark>
+  .innerHTML =
+  '&lt;div <mark>pseudo</mark>="<mark>x-pseudo</mark>">\
+  &lt;/div>'</code>
+        <code>&lt;/script></code>
+      </pre>
+    </div>
+  
+    <div id="css-gif" class="step" data-x="-1000" data-y="3500" data-rotate="-90">
+      <img src="img/css.gif" width="100%">
+    </div>
+
+    <div id="shadow-vars" class="step" data-x="-3500" data-y="3000" data-rotate="90">
+      <h3>CSS Variables</h3>
+      <pre>
+        <code>x-tag {</code>
+        <code>  color: var(<mark>tag-color</mark>);</code>
+        <code>  font: var(<mark>tag-font</mark>)}</code>
+      </pre><br>
+      <pre>
+        <code>#host {</code>
+        <code>  var-<mark>tag-color</mark>: blue;</code>
+        <code>  var-<mark>tag-font</mark>: sans-serif}</code>
+      </pre>
+      <a href="http://dev.w3.org/csswg/css-variables/" target="_blank">CSS Custom Properties</a>
+    </div>
+
+    <div id="shadow-insertion" class="step" data-x="1500" data-y="2400" style="overflow:scroll;height:500px">
+      <img src="img/insertion-points.svg" style="width: 100%;">
+    </div>
+
+    <div id="shadow-content" class="step" data-x="-2000" data-y="2900" data-rotate="180">
+      <pre style="max-height: 300px">
+        <code>&lt;div id="host"></code>
+        <code>&lt;h1>Normal DOM&lt;/h1></code>
+        <code>&lt;div>other content&lt;/div></code>
+        <code>&lt;/div></code>
+      </pre>
+      <br>
+      <pre style="max-height: 300px">
+        <code>&lt;style></code>
+        <code>h1, h2 {font-size: 25pt}</code>
+        <code>&lt;/style></code>
+        <code>&lt;<mark>content</mark> <mark>select</mark>="h1">&lt;/<mark>content</mark>></code>
+        <code>&lt;h2>sub header&lt;h2></code>
+        <code>&lt;h2content select="<mark>*</mark>">&lt;/content></code>
+      </pre>
+    </div>
+
+    <div id="custom-elements" class="step" data-x="-2500" data-y="800">
+      <pre style="max-height: 300px">
+        <code>&lt;<mark>element</mark> name="<mark>x-tag</mark>"></code>
+        <code>  &lt;template></code>
+        <code>    &lt;content>&lt;/content></code>
+        <code>  &lt;/template></code>
+        <code>&lt;/<mark>element</mark>></code>
+      </pre>
+      <br>
+      <pre style="max-height: 300px">
+        <code>&lt;link rel="<mark>component</mark>"
+  href="<mark>x-tag</mark>.html"></code>
+        <code>&lt;x-tag></code>
+        <code>  ...</code>
+        <code>&lt;/x-tag></code>
+      </pre>
+    </div>
+
+    <div id="custom-elements-js" class="step" data-x="-3000" data-y="1600" data-rotate="180">
+      <pre style="max-height: 300px">
+        <code>&lt;element name="x-tag"
+    <mark>constructor</mark>="<mark>Tag</mark>"></code>
+        <code>  &lt;template>&lt;/template></code>
+        <code>&lt;script><mark>Tag</mark>.prototype = {}</code>
+        <code>&lt;/script>&lt;/element></code>
+      </pre>
+      <br>
+      <pre style="max-height: 300px">
+        <code>&lt;link rel="<mark>component</mark>"
+  href="<mark>x-tag</mark>.html"></code>
+        <code>&lt;script></code>
+        <code>var t = new <mark>Tag</mark>()</code>
+        <code>t.addEventListener('click',
+  function(){ this.<mark>method</mark>() })</code>
+        <code>document.body
+    .appendChild(tabs)</code>
+        <code>&lt;/script></code>
+      </pre>
+    </div>
+
+    <div id="shadow-browsers" class="step" data-x="0" data-y="1600">
+      <ul class="browsers">
+        <li class="chrome">25</li>
+        <li class="safari dim"></li>
+        <li class="firefox dim"></li>
+        <li class="opera dim"></li>
+        <li class="ie dim"></li>
+      </ul>
+    </div>
+    
+    <div id="name" class="step" data-x="3000" data-y="3000" data-rotate="-90">
+      <h3>I want to use it NOW</h3>
+      <ul class="browsers">
+        <li><a href="http://x-tags.org">X-Tags</a></li>
+        <li><a href="http://www.polymer-project.org">Polymer</a></li>
+        <li><a href="http://www.dartlang.org/articles/web-ui/">Dart Web-UI</a></li>
+      </ul>
+    </div>
+
+    <div id="thanks" class="step center" data-x="-1000" data-y="0" data-rotate="180">
+      <h2>Thanks</h2><br>
+      <a href="http://github.com/lvivski" class="github big" target="_blank">lvivski</a><br>
+    </div>
+
+    <div id="overview" class="step" data-x="0" data-y="1600" data-scale="8"></div>
+</div>
+<script src="js/impress.js"></script>
+<script>
+if ("ontouchstart" in document.documentElement) document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>"
+impress().init()
+</script>
+</body>
+</html>
