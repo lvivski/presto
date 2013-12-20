@@ -23,7 +23,7 @@
   </div>
 
   <div id="title" class="step" data-x="0" data-y="0">
-    <h1>Components for the Real World</h1>
+    <h1>Web Components</h1>
   </div>
 
   <div id="wiki" class="step" data-x="-3000" data-y="-1000" data-rotate="-90">
@@ -37,7 +37,7 @@
 
   <div id="delphi" class="step center" data-x="-800" data-y="800" data-rotate="0">
     <h3>Delphi</h3>
-    <img src="img/delphi.png">
+    <img src="img/delphi6.png">
   </div>
 
   <div id="jquery" class="step center" data-x="-4000" data-y="800" data-rotate="-90">
@@ -53,7 +53,7 @@
       <li>Ease to break</li>
     </ul>
   </div>
-  
+
   <div id="sencha" class="step" data-x="-4000" data-y="2000" data-rotate="90">
     <h3>Sencha (ExtJS)</h3>
     <ul>
@@ -68,11 +68,52 @@
       <img src="img/bootstrap.png">
       <img src="img/bower.png">
     </div>
-  
+
     <div id="bem" class="step" data-x="0" data-y="800" data-rotate="-90">
       <h3>BEM</h3>
       <code>BEM.block('<mark>date-picker</mark>', {<mark>...</mark>})</code>
       <code>{block: '<mark>date-picker</mark>'}</code>
+    </div>
+
+    <div id="angular" class="step center" data-x="800" data-y="3600" data-rotate="-90">
+      <img src="img/angular.png">
+    </div>
+
+    <div id="directive" class="step" data-x="2000" data-y="3600" data-rotate="0">
+      <h3>AngularJS</h3>
+      <pre>
+        <code>angular.directive(</code>
+        <code>  '<mark>mega-tag</mark>', function() {</code>
+        <code>  return {</code>
+        <code>    restrict: '<mark>E</mark>',</code>
+        <code>    link: function</code>
+        <code>      (scope, element, attrs)</code>
+        <code>      {<mark>...</mark>}</code>
+        <code>  }</code>
+        <code>})</code>
+      </pre>
+    </div>
+
+    <div id="directive-use" class="step center" data-x="0" data-y="3600" data-rotate="90">
+      <h3>AngularJS</h3>
+      <code>&lt;<mark>mega-tag</mark>>&lt;<mark>/mega-tag</mark>></code>
+    </div>
+    
+    <div id="react" class="step center" data-x="3600" data-y="0" data-rotate="0">
+      <img src="img/react.png">
+    </div>
+    
+    <div id="react-component" class="step" data-x="3600" data-y="-1000" data-rotate="90">
+      <h3>ReactJS</h3>
+      <pre>
+        <code>React.createClass({</code>
+        <code>  render: function() {</code>
+        <code>    return (<mark>&lt;div></mark></code>
+        <code>    {this.<mark>props</mark>.awesome}</code>
+        <code>    <mark>&lt;/div></mark>)</code>
+        <code>  }</code>
+        <code>})</code>
+      </pre>
     </div>
 
     <div id="html5" class="step" data-x="3000" data-y="-1000"></div>
@@ -168,8 +209,9 @@
         <code>t.<mark>content</mark>
     .querySelector('img')
     .src = 'http://...'</code>
-        <code>document.body.appendChild(
-    t.content.<mark>cloneNode</mark>(true))</code>
+        <code>var c = document
+    .<mark>importNode</mark>(t.content, true)</code>
+        <code>document.body.appendChild(c)</code>
       </pre>
     </div>
 
@@ -187,7 +229,7 @@
         <li>Encapsulation (styles, scripts)</li>
         <li>Inserion points</li>
         <li>styling hooks (custom pseudo els)</li>
-        <li><code>@host</code> at-rule<li>
+        <li><code>:host</code> selector<li>
       </ul>
       <a target="_blank" href="http://www.w3.org/TR/shadow-dom/">w3c spec</a>
     </div>
@@ -207,15 +249,15 @@
     <div id="shadow-example" class="step" data=x="0" data-y="2700">
       <h3>Shadow DOM</h3>
       <pre>
-        <code>&lt;div id="host"></code>
+        <code>&lt;div id="<mark>host</mark>"></code>
         <code>&lt;h1>Normal DOM&lt;/h1></code>
         <code>&lt;/div></code>
       </pre>
       <br>
       <pre>
         <code>var shadow = document
-    .querySelector('#host')
-    .createShadowRoot()</code>
+    .querySelector('#<mark>host</mark>')
+    .<mark>createShadowRoot()</mark></code>
         <code>shadow.innerHTML = '&lt;div>Shadow DOM&lt;/div>'</code>
       </pre>
     </div>
@@ -228,7 +270,7 @@
         var shadow = document.querySelector('#shadow-host').webkitCreateShadowRoot()
         shadow.innerHTML = '<div>Shadow DOM</div>'
         // shadow.innerHTML += '<style>div {color: red}</style>'
-        // shadow.innerHTML += '<style>@host { * { background: blue } }</style>'
+        // shadow.innerHTML += '<style>:host { background: blue }</style>'
         // shadow.resetStyleInheritance = true
         // shadow.applyAuthorStyles = true
       </script>
@@ -253,7 +295,7 @@
         <code>&lt;/script></code>
       </pre>
     </div>
-  
+
     <div id="css-gif" class="step" data-x="-1000" data-y="3500" data-rotate="-90">
       <img src="img/css.gif" width="100%">
     </div>
@@ -291,21 +333,34 @@
         <code>&lt;/style></code>
         <code>&lt;<mark>content</mark> <mark>select</mark>="h1">&lt;/<mark>content</mark>></code>
         <code>&lt;h2>sub header&lt;h2></code>
-        <code>&lt;h2content select="<mark>*</mark>">&lt;/content></code>
+        <code>&lt;content select="<mark>*</mark>">&lt;/content></code>
       </pre>
     </div>
 
     <div id="custom-elements" class="step" data-x="-2500" data-y="800">
-      <pre style="max-height: 300px">
-        <code>&lt;<mark>element</mark> name="<mark>x-tag</mark>"></code>
-        <code>  &lt;template></code>
-        <code>    &lt;content>&lt;/content></code>
-        <code>  &lt;/template></code>
-        <code>&lt;/<mark>element</mark>></code>
+      <pre>
+        <code>&lt;template id="<mark>tpl</mark>"></code>
+        <code>  &lt;content>&lt;/content></code>
+        <code>&lt;/template></code>
+        <code>&lt;script></code>
+        <code>var XProto = 
+    Object.create(HTMLElement.prototype)</code>
+        <code>XProto.createdCallback = function() {</code>
+        <code>  var t = document
+      .querySelector('#<mark>tpl</mark>')</code>
+        <code>  var c = document
+      .importNode(t.content, true)</code>
+        <code>  this.<mark>createShadowRoot</mark>().appendChild(c)</code>
+        <code>}</code>
+        <code>document.register('x-tag', {</code>
+        <code> prototype: XProto</code>
+        <code>})&lt;/script></code>
       </pre>
-      <br>
-      <pre style="max-height: 300px">
-        <code>&lt;link rel="<mark>component</mark>"
+    </div>
+
+    <div id="custom-elements-html" class="step" data-x="-3000" data-y="1600" data-rotate="180">
+      <pre>
+        <code>&lt;link rel="<mark>import</mark>"
   href="<mark>x-tag</mark>.html"></code>
         <code>&lt;x-tag></code>
         <code>  ...</code>
@@ -313,38 +368,16 @@
       </pre>
     </div>
 
-    <div id="custom-elements-js" class="step" data-x="-3000" data-y="1600" data-rotate="180">
-      <pre style="max-height: 300px">
-        <code>&lt;element name="x-tag"
-    <mark>constructor</mark>="<mark>Tag</mark>"></code>
-        <code>  &lt;template>&lt;/template></code>
-        <code>&lt;script><mark>Tag</mark>.prototype = {}</code>
-        <code>&lt;/script>&lt;/element></code>
-      </pre>
-      <br>
-      <pre style="max-height: 300px">
-        <code>&lt;link rel="<mark>component</mark>"
-  href="<mark>x-tag</mark>.html"></code>
-        <code>&lt;script></code>
-        <code>var t = new <mark>Tag</mark>()</code>
-        <code>t.addEventListener('click',
-  function(){ this.<mark>method</mark>() })</code>
-        <code>document.body
-    .appendChild(tabs)</code>
-        <code>&lt;/script></code>
-      </pre>
-    </div>
-
     <div id="shadow-browsers" class="step" data-x="0" data-y="1600">
       <ul class="browsers">
-        <li class="chrome">25</li>
+        <li class="chrome">29</li>
         <li class="safari dim"></li>
-        <li class="firefox dim"></li>
-        <li class="opera dim"></li>
+        <li class="firefox">24*</li>
+        <li class="opera">17</li>
         <li class="ie dim"></li>
       </ul>
     </div>
-    
+
     <div id="name" class="step" data-x="3000" data-y="3000" data-rotate="-90">
       <h3>I want to use it NOW</h3>
       <ul class="browsers">
